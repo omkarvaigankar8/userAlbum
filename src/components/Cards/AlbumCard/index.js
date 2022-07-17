@@ -1,18 +1,16 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-// import 
-
-const AlbumCard = ({album}) => {
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import './albumCard.scss'
+const AlbumCard = ({ album }) => {
+  let history = useHistory();
   return (
     <div className='album_card'>
-        <h1>{album.title}</h1>
-        <button onClick={()=>{
-        }}><NavLink to={`/albums/gallery/${album.userId}`}>View Gallery</NavLink></button>
-        
-
-
+      <h4>{album.title}</h4>
+      <button className={"btn button"}
+        onClick={() => {
+          history.push(`/albums/gallery/${album.userId}`)
+        }}><span className="span-btn">View Gallery</span></ button>
     </div>
   )
 }
-
-export default AlbumCard
+export default AlbumCard;

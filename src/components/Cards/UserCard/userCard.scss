@@ -1,0 +1,62 @@
+.user_card {
+	background-color: var(--headerBg);
+	box-shadow: 9px 7px 9px 1px #000;
+	padding: 20px;
+	border-radius: 20px;
+	margin-bottom: 40px;
+	margin-right: 20px;
+	max-width: 356px;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	@media (max-width:'767px') {
+		margin-right: 0px;
+	}
+		
+	.user_card_row1 {
+		display: flex;
+		.user_image {
+			margin-right: 10px;
+			width: 35%;
+			img {
+				max-width: 100px;
+				// width: 100%;
+				max-height: 100px;
+				height: 100%;
+				margin-bottom: 20px;
+			}
+		}
+		.user_content {
+			width: 66%;
+			.username{
+				font-style: italic;
+			}
+			.email{
+				p,span{
+					font-size: 14px;
+				}
+			}
+			.username,.phone,.email{
+				svg{
+					position: relative;
+					top: 5px;
+				}
+			}
+		}
+	}
+	.user_card_row3{
+		.address{
+			svg{
+				position: relative;
+				top: 5px;
+			}
+		}
+		.website{
+			margin-top: 25px;
+			h5{
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

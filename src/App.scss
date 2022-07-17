@@ -1,0 +1,163 @@
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+.container {
+	// max-width: 1250px;
+	h2{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	margin: 0 auto 40px;
+	@media (max-width: '767px') {
+		margin: 0 20px 40px;
+	}
+}
+.users {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+a {
+	position: relative;
+	color: #fff;
+	text-decoration: none;
+	&:hover {
+		color: #fff;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 2px;
+		bottom: -5px;
+		left: 0;
+		background-color: #fff;
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+	}
+	&:hover::before {
+		transform: scaleX(1);
+	}
+}
+// button
+.button {
+	display: inline-block;
+	position: relative;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+	margin: 0px;
+	background: rgba(0, 0, 0, 0.8);
+}
+.span-btn {
+	display: block;
+	padding: 10px 8px 5px;
+	font-size: 14px;
+}
+
+.button::before,
+.button::after {
+	content: '';
+	width: 0;
+	height: 2px;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: var(--fontColor);
+}
+
+.span-btn::before,
+.span-btn::after {
+	content: '';
+	width: 2px;
+	height: 0;
+	position: absolute;
+	transition: all 0.2s linear;
+	background: #fff;
+}
+.button:hover::before,
+.button:hover::after {
+	width: 100%;
+}
+.button:hover .span-btn::before,
+.button:hover .span-btn::after {
+	height: 100%;
+}
+.btn::before {
+	left: 50%;
+	top: 0;
+	transition-duration: 0.4s;
+}
+.btn::after {
+	left: 50%;
+	bottom: 0;
+	transition-duration: 0.4s;
+}
+.btn .span-btn::before {
+	left: 0;
+	top: 50%;
+	transition-duration: 0.4s;
+}
+.btn .span-btn::after {
+	right: 0;
+	top: 50%;
+	transition-duration: 0.4s;
+}
+.btn:hover::before,
+.btn:hover::after {
+	left: 0;
+}
+.btn:hover .span-btn::before,
+.btn:hover .span-btn::after {
+	top: 0;
+}
+.btn:hover {
+	color: white;
+}
+.gallery_container {
+	h2{
+		text-align: center;
+	}
+	margin: 0 20px 40px;
+	@media (max-width: '767px') {
+		margin: 0 10px 40px;
+	}
+}
+.album_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+.sweet-loading{
+	text-align: center;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
